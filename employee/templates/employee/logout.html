@@ -1,0 +1,12 @@
+{% extends "web/base_lout.html" %}
+{% block lout %}
+<div>
+    <h5 class="text-center">You have been logged out</h5>
+</div>
+<div class="social-auth-links text-center">
+    <a href="{% url 'login' %}" class="text-center">Log In Again</a>
+</div>
+<div class="social-auth-links text-center">
+    <a href="{% url 'web-home' %}" class="text-center">Go back to home</a>
+</div>
+{% endblock lout %}

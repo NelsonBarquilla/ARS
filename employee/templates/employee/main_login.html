@@ -1,0 +1,50 @@
+{% extends "web/base_log.html" %}
+{% block log %}
+<div class="login-box">
+    <div class="login-logo" align="center">
+        <img src="media/ars_logo.png" width="200" height="180">
+    </div>
+    <div>
+        {% csrf_token %}
+        <form action="{% url 'web-admin-login' %}" method="GET">
+            <div class="form-group has-feedback">
+                <button type="submit" class="btn btn-primary btn-block btn-flat"><strong>Login
+                    as Admin</strong>
+                </button>
+            </div>
+        </form>
+        <!--<form action="{% url 'web-employee-login' %}" method="GET">-->
+        <!--<div class="form-group has-feedback">-->
+        <!--<button type="submit" class="btn btn-primary btn-block btn-flat"><strong>Login-->
+        <!--as Employee </strong>-->
+        <!--</button>-->
+        <!--</div>-->
+        <!--</form>-->
+        </form>
+        <form action="{% url 'web-flight-list' %}" method="GET">
+            <div class="form-group has-feedback">
+                <button type="submit" class="btn btn-primary btn-block btn-flat"><strong>Enquiry</strong>
+                </button>
+            </div>
+        </form>
+        <form action="{% url 'web-choose-flight' %}" method="GET">
+            <div class="form-group has-feedback">
+                <button type="submit" class="btn btn-primary btn-block btn-flat"><strong>Reservation</strong>
+                </button>
+            </div>
+        </form>
+        <form action="{% url 'web-choose-reserved-flight' %}" method="GET">
+            <div class="form-group has-feedback">
+                <button type="submit" class="btn btn-primary btn-block btn-flat"><strong>Booking Details</strong>
+                </button>
+            </div>
+        </form>
+        <form action="{% url 'web-choose-cancel-flight' %}" method="GET">
+            <div class="form-group has-feedback">
+                <button type="submit" class="btn btn-primary btn-block btn-flat"><strong>Cancellation</strong>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock log %}t

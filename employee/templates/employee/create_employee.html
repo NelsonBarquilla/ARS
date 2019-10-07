@@ -1,0 +1,88 @@
+{% extends "web/base.html" %}
+{% block global %}
+<div class="register-logo">
+    <h1><b>ADD</b> EMPLOYEE INFO</h1>
+</div>
+<div class="box box-body box-info">
+    <form method="POST">
+        <div class="form-group">
+            {% csrf_token %}
+            <div class="col-md-4">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="Username" name="username" maxlength="150"
+                           autofocus required id="id_username">
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="First Name" name="first_name" maxlength="30"
+                           required id="id_first_name">
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="Middle name" name="middle_name" maxlength="30"
+                           required id="id_middle_name">
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="Last name" name="last_name" maxlength="30"
+                           required id="id_last_name">
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group has-feedback">
+                    <input type="email" class="form-control" placeholder="Email" name="emp_email" maxlength="50"
+                           required id="id_emp_email">
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="Address" name="address" maxlength="100"
+                           required
+                           id="id_address">
+                    <span class="glyphicon glyphicon-home form-control-feedback"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="Designation" name="designation"
+                           maxlength="100" required id="id_designation">
+                    <span class="glyphicon glyphicon-flag form-control-feedback"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="Department" name="department" maxlength="50"
+                           required id="id_department">
+                    <span class="glyphicon glyphicon-pushpin form-control-feedback"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group has-feedback">
+                    <input type="password" class="form-control" placeholder="Password" name="password1" required
+                           id="id_password1">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group has-feedback">
+                    <input type="password" class="form-control" placeholder="Confirm password" name="password2"
+                           required id="id_password2">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+            </div>
+            <div class="col-md-10"></div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary btn-block btn-flat">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock global %}

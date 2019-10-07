@@ -1,0 +1,41 @@
+{% extends "web/base_log.html" %}
+{% load static %}
+{% block log %}
+<div class="login-box">
+    <div class="login-logo">
+        <img src="{% static 'images/emp_logo.png' %}" width="200" height="190">
+        <b>NPS</b>Employee
+    </div>
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <form action="{% url 'web-home' %}" method="post">
+                <div class="form-group has-feedback">
+                    <input input type="text" name="username" autofocus required id="id_username" class="form-control"
+                           placeholder="Username">
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" name="password" required id="id_password" class="form-control"
+                           placeholder="Password">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div>
+                    <div class="col-xs-2">
+                    </div>
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    </div>
+                </div>
+            </form>
+            <div class="col-xs-4">
+                <form action="{% url 'web-main' %}">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Back</button>
+                </form>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock log %}
+
+
